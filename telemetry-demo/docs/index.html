@@ -342,35 +342,9 @@ const handleSignupClick = () => {
                 </div>
             </section>
             
-            <!-- Slide 8: Clarity Benefits -->
-            <section>
-                <h2>✅ Why Clarity First?</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div class="clarity-box">
-                        <h3>👁️ See Problems</h3>
-                        <p>Watch users struggle with your UI in real sessions</p>
-                    </div>
-                    <div class="clarity-box">
-                        <h3>🎯 Quick Wins</h3>
-                        <p>Find obvious UX issues before complex analytics</p>
-                    </div>
-                    <div class="clarity-box">
-                        <h3>🆓 Zero Cost</h3>
-                        <p>No budget approval needed - just implement</p>
-                    </div>
-                    <div class="clarity-box">
-                        <h3>🔄 Immediate Value</h3>
-                        <p>Start seeing insights within hours</p>
-                    </div>
-                </div>
-                <div class="highlight-box" style="margin-top: 20px;">
-                    <strong>Pro Tip:</strong> Use Clarity findings to inform what GA4 events to track
-                </div>
-            </section>
-            
             <!-- Part 2: Google Analytics 4 -->
             
-            <!-- Slide 9: Now Let's Add Google Analytics -->
+            <!-- Slide 8: Now Let's Add Google Analytics -->
             <section>
                 <h2>📊 Now Let's Add Google Analytics</h2>
                 <div class="architecture-box">
@@ -399,7 +373,7 @@ const handleSignupClick = () => {
                 </div>
             </section>
             
-            <!-- Slide 10: GA4 Implementation Approaches -->
+            <!-- Slide 9: GA4 Implementation Approaches -->
             <section>
                 <h2>🔀 GA4 Implementation Approaches</h2>
                 <table class="comparison-table">
@@ -437,7 +411,7 @@ const handleSignupClick = () => {
                 </div>
             </section>
             
-            <!-- Slide 11: GTM Setup -->
+            <!-- Slide 10: GTM Setup -->
             <section>
                 <h2>🏷️ Google Tag Manager Setup</h2>
                 <pre><code class="language-html">&lt;!-- From index.html:9-15 --&gt;
@@ -472,7 +446,7 @@ export const trackGTMEvent = (
             
             <!-- Part 3: Custom Events & Properties -->
             
-            <!-- Slide 12: Event Fundamentals -->
+            <!-- Slide 11: Event Fundamentals -->
             <section>
                 <h2>🔬 Event Fundamentals</h2>
                 <div class="architecture-box">
@@ -493,7 +467,7 @@ export const trackGTMEvent = (
                 </div>
             </section>
             
-            <!-- Slide 13: Real Custom Properties Examples -->
+            <!-- Slide 12: Real Custom Properties Examples -->
             <section>
                 <h2>🎨 Real Custom Properties from Our Codebase</h2>
                 <pre><code class="language-javascript">// From src/pages/HomePage.tsx:7-26
@@ -518,7 +492,7 @@ const handleButtonClick = () => {
                 <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/HomePage.tsx#L7-L26" class="code-link" target="_blank">src/pages/HomePage.tsx:7-26 →</a>
             </section>
             
-            <!-- Slide 14: Why Custom Properties Matter -->
+            <!-- Slide 13: Why Custom Properties Matter -->
             <section>
                 <h2>💡 Why Custom Properties Are Game-Changers</h2>
                 <div class="two-columns">
@@ -546,7 +520,7 @@ const handleButtonClick = () => {
                 </div>
             </section>
             
-            <!-- Slide 15: E-commerce Event Example -->
+            <!-- Slide 14: E-commerce Event Example -->
             <section>
                 <h2>🛒 E-commerce Custom Properties</h2>
                 <pre><code class="language-javascript">// From src/pages/HomePage.tsx:29-55
@@ -573,7 +547,7 @@ const handlePurchaseClick = () => {
                 <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/HomePage.tsx#L29-L55" class="code-link" target="_blank">src/pages/HomePage.tsx:29-55 →</a>
             </section>
             
-            <!-- Slide 16: Advanced Custom Properties -->
+            <!-- Slide 15: Advanced Custom Properties -->
             <section>
                 <h2>🔧 Advanced Custom Properties Pattern</h2>
                 <pre><code class="language-javascript">// From src/pages/CustomPropertiesPage.tsx:14-32
@@ -599,7 +573,7 @@ const handleUserEvent = () => {
                 <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/CustomPropertiesPage.tsx#L14-L32" class="code-link" target="_blank">src/pages/CustomPropertiesPage.tsx:14-32 →</a>
             </section>
             
-            <!-- Slide 17: Form Tracking with Field Details -->
+            <!-- Slide 16: Form Tracking with Field Details -->
             <section>
                 <h2>📝 Form Tracking with Rich Context</h2>
                 <pre><code class="language-javascript">// From src/pages/CustomPropertiesPage.tsx:112-135
@@ -629,7 +603,7 @@ const handleFormEvent = () => {
                 <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/CustomPropertiesPage.tsx#L112-L135" class="code-link" target="_blank">src/pages/CustomPropertiesPage.tsx:112-135 →</a>
             </section>
             
-            <!-- Slide 18: Content Engagement Properties -->
+            <!-- Slide 17: Content Engagement Properties -->
             <section>
                 <h2>📖 Content Engagement Tracking</h2>
                 <pre><code class="language-javascript">// From src/pages/CustomPropertiesPage.tsx:35-58
@@ -660,7 +634,7 @@ const handleContentEvent = () => {
             
             <!-- Part 4: Implementation Patterns -->
             
-            <!-- Slide 19: Centralized Tracking Pattern -->
+            <!-- Slide 18: Centralized Tracking Pattern -->
             <section>
                 <h2>🛠️ Centralized Tracking Pattern</h2>
                 <pre><code class="language-javascript">// From src/utils/tracking-comparison.ts:149-162
@@ -684,7 +658,7 @@ export const trackWithAllMethods = (
                 </div>
             </section>
             
-            <!-- Slide 20: Error-Safe Implementation -->
+            <!-- Slide 19: Error-Safe Implementation -->
             <section>
                 <h2>🛡️ Error-Safe Implementation</h2>
                 <pre><code class="language-javascript">// Defensive coding pattern
@@ -718,7 +692,7 @@ export const trackEvent = (eventName: string, properties?: any) => {
 };</code></pre>
             </section>
             
-            <!-- Slide 21: Route Tracking -->
+            <!-- Slide 20: Route Tracking -->
             <section>
                 <h2>🔄 Automatic Route Tracking</h2>
                 <pre><code class="language-javascript">// From src/App.tsx:48-58
@@ -746,7 +720,7 @@ function AppContent() {
             
             <!-- Part 5: Testing & Debugging -->
             
-            <!-- Slide 22: Testing Strategy -->
+            <!-- Slide 21: Testing Strategy -->
             <section>
                 <h2>🧪 Testing Your Analytics Implementation</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
@@ -773,7 +747,7 @@ window.clarity; // Check Clarity availability
 window.gtag; // Check GA4 gtag function</code></pre>
             </section>
             
-            <!-- Slide 23: Common Pitfalls -->
+            <!-- Slide 22: Common Pitfalls -->
             <section>
                 <h2>⚠️ Common Pitfalls & Solutions</h2>
                 <table class="comparison-table">
@@ -807,7 +781,7 @@ window.gtag; // Check GA4 gtag function</code></pre>
             
             <!-- Part 6: Data Pipeline -->
             
-            <!-- Slide 24: GA4 to BigQuery -->
+            <!-- Slide 23: GA4 to BigQuery -->
             <section>
                 <h2>🔗 GA4 to BigQuery Integration</h2>
                 <div class="architecture-box">
@@ -833,7 +807,7 @@ WHERE event_name = 'button_click'
 GROUP BY event_name, user_type;</code></pre>
             </section>
             
-            <!-- Slide 25: Repository Structure -->
+            <!-- Slide 24: Repository Structure -->
             <section>
                 <h2>📁 Our Implementation Structure</h2>
                 <pre><code class="language-bash">telemetry-demo/
@@ -854,7 +828,7 @@ GROUP BY event_name, user_type;</code></pre>
                 </div>
             </section>
             
-            <!-- Slide 26: Resources -->
+            <!-- Slide 25: Resources -->
             <section>
                 <h2>📚 Resources & Links</h2>
                 <div class="two-columns">
@@ -882,14 +856,14 @@ GROUP BY event_name, user_type;</code></pre>
                 </div>
             </section>
             
-            <!-- Slide 27: Thank You -->
+            <!-- Slide 26: Thank You -->
             <section>
                 <h1>Thank You! 🙏</h1>
                 <div style="margin-top: 50px;">
                     <p style="font-size: 1.5em;">Questions?</p>
                 </div>
                 <div style="margin-top: 40px;">
-                    <p>📧 Contact: chakshu@smaagragovernance.in</p>
+                    <p>📧 Contact: chakshu@samagragovernance.in</p>
                     <p>📦 Repository: <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/tree/main/telemetry-demo" target="_blank" style="color: #ffffff;">github.com/ChakshuGautam/telemetry-ga-clarity</a></p>
                     <p>🔗 Slides: <a href="./index.html" style="color: #ffffff;">Available Online</a></p>
                 </div>
