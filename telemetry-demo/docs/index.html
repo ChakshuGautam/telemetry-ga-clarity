@@ -63,8 +63,9 @@
             max-width: 100%;
         }
         
-        /* Override Reveal.js defaults */
-        .reveal .slides section {
+        /* Override Reveal.js defaults with stronger selectors */
+        .reveal .slides section,
+        .reveal .slides > section {
             top: 50% !important;
             left: 50% !important;
             transform: translate(-50%, -50%) !important;
@@ -74,6 +75,27 @@
             flex-direction: column !important;
             justify-content: center !important;
             align-items: center !important;
+            position: absolute !important;
+        }
+        
+        /* Force vertical centering for all slide content */
+        .reveal .slides section > *,
+        .reveal .slides > section > * {
+            flex-shrink: 0;
+        }
+        
+        /* Ensure slides are vertically centered at all times */
+        .reveal .slides {
+            height: 100vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        /* Remove any margin/padding that might interfere */
+        .reveal .slides section {
+            margin: 0 !important;
+            padding: 2rem !important;
         }
         
         .reveal code {
