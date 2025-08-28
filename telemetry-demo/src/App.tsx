@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ComparisonPage from './pages/ComparisonPage';
+import CustomPropertiesPage from './pages/CustomPropertiesPage';
 import { trackPageView } from './utils/tracking';
 import './App.css';
 
@@ -58,6 +59,33 @@ function Navigation() {
         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
           Comparison
         </Link>
+        <Link to="/custom-properties" style={{ 
+          color: '#fafafa', 
+          textDecoration: 'none', 
+          fontSize: '0.875rem',
+          fontWeight: '500',
+          padding: '0.5rem 1rem',
+          borderRadius: '0.375rem',
+          transition: 'background-color 0.2s'
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#27272a'}
+        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+          Custom Properties
+        </Link>
+        <a href="/docs/" target="_blank" style={{ 
+          color: '#fafafa', 
+          textDecoration: 'none', 
+          fontSize: '0.875rem',
+          fontWeight: '500',
+          padding: '0.5rem 1rem',
+          borderRadius: '0.375rem',
+          transition: 'background-color 0.2s',
+          display: 'inline-block'
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#27272a'}
+        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
+          📊 Presentation
+        </a>
       </div>
     </nav>
   );
@@ -70,7 +98,8 @@ function AppContent() {
     const pageTitles: Record<string, string> = {
       '/': 'Home',
       '/about': 'About',
-      '/comparison': 'Comparison'
+      '/comparison': 'Comparison',
+      '/custom-properties': 'Custom Properties'
     };
     const pageTitle = pageTitles[location.pathname] || 'Unknown';
     trackPageView(location.pathname, pageTitle);
@@ -83,6 +112,7 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/comparison" element={<ComparisonPage />} />
+        <Route path="/custom-properties" element={<CustomPropertiesPage />} />
       </Routes>
     </>
   );

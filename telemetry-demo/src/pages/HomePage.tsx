@@ -12,6 +12,15 @@ export default function HomePage() {
       event_category: 'engagement',
       event_label: 'home_page_button',
       value: newCount,
+      // Custom properties
+      button_text: 'Track Engagement Event',
+      page_section: 'hero',
+      user_action: 'repeated_click',
+      click_count: newCount,
+      timestamp: new Date().toISOString(),
+      session_duration: Math.floor((Date.now() - performance.timing.navigationStart) / 1000),
+      viewport_width: window.innerWidth,
+      viewport_height: window.innerHeight,
     });
     
     trackClarityCustomEvent('HomeButtonClick', { clickCount: newCount });
@@ -19,15 +28,33 @@ export default function HomePage() {
 
   const handlePurchaseClick = () => {
     trackGTMEvent('purchase', {
+      // Standard e-commerce parameters
       transaction_id: `demo_${Date.now()}`,
       value: 25.42,
       currency: 'USD',
       items: [{
         item_id: 'SKU123',
         item_name: 'Demo Product',
+        item_category: 'Electronics',
+        item_category2: 'Gadgets',
+        item_category3: 'Smart Devices',
+        item_brand: 'TechCorp',
+        item_variant: 'Black',
         price: 25.42,
-        quantity: 1
-      }]
+        quantity: 1,
+        item_list_name: 'Homepage Featured',
+        item_list_id: 'home_featured',
+        index: 0
+      }],
+      // Custom properties
+      payment_type: 'credit_card',
+      shipping_tier: 'standard',
+      coupon: 'DEMO20',
+      is_first_purchase: false,
+      user_segment: 'returning_customer',
+      device_type: /Mobile/.test(navigator.userAgent) ? 'mobile' : 'desktop',
+      experiment_variant: 'variant_b',
+      recommendation_source: 'ai_suggested',
     });
     
     trackClarityCustomEvent('PurchaseIntent', { 
