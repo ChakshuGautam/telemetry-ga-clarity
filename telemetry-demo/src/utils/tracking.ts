@@ -2,6 +2,7 @@ declare global {
   interface Window {
     dataLayer: any[];
     clarity: (...args: any[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }
 
@@ -9,12 +10,21 @@ export const trackGTMEvent = (
   eventName: string,
   parameters?: Record<string, any>
 ) => {
-  if (typeof window !== 'undefined' && window.dataLayer) {
-    window.dataLayer.push({
-      event: eventName,
-      ...parameters
-    });
-    console.log('GTM Event:', eventName, parameters);
+  if (typeof window !== 'undefined') {
+    // Send to GTM via dataLayer
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: eventName,
+        ...parameters
+      });
+      console.log('GTM Event:', eventName, parameters);
+    }
+    
+    // Also send directly to GA4 via gtag
+    if (window.gtag) {
+      window.gtag('event', eventName, parameters);
+      console.log('GA4 Direct Event:', eventName, parameters);
+    }
   }
 };
 

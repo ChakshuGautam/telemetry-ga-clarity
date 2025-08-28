@@ -113,9 +113,10 @@ function App() {
           <h3 style={{ color: '#fafafa' }}>✅ Analytics Configuration Active:</h3>
           <ol style={{ textAlign: 'left', maxWidth: '600px', margin: '0 auto', color: '#a1a1aa' }}>
             <li>Google Tag Manager ID: <code>GTM-MT9MWSLQ</code></li>
+            <li>Google Analytics 4 ID: <code>G-8VNHTC2ZJX</code></li>
             <li>Microsoft Clarity ID: <code>t1ori1zqey</code></li>
             <li>Open browser DevTools to see events being logged in the console</li>
-            <li>Check Network tab to verify events are being sent to GTM and Clarity</li>
+            <li>Check Network tab to verify events are being sent to GA4, GTM and Clarity</li>
           </ol>
         </footer>
       </div>
