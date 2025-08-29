@@ -22,23 +22,27 @@
         
         .reveal h1 {
             font-size: 2.5em;
+            font-weight: 600;
         }
         
         .reveal h2 {
             font-size: 1.8em;
+            font-weight: 500;
         }
         
         .reveal h3 {
             font-size: 1.3em;
+            font-weight: 500;
         }
         
         .reveal {
             font-size: 32px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
         }
         
         .reveal p, .reveal li {
             font-size: 0.85em;
-            line-height: 1.4;
+            line-height: 1.5;
         }
         
         .reveal .slides section {
@@ -51,19 +55,13 @@
             box-sizing: border-box;
         }
         
-        .reveal .slides {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
         .reveal .slides section > * {
             margin: 0.5em 0;
             width: 100%;
             max-width: 100%;
         }
         
-        /* Override Reveal.js defaults with stronger selectors */
+        /* Override Reveal.js defaults */
         .reveal .slides section,
         .reveal .slides > section {
             top: 50% !important;
@@ -76,131 +74,178 @@
             justify-content: center !important;
             align-items: center !important;
             position: absolute !important;
-        }
-        
-        /* Force vertical centering for all slide content */
-        .reveal .slides section > *,
-        .reveal .slides > section > * {
-            flex-shrink: 0;
-        }
-        
-        /* Ensure slides are vertically centered at all times */
-        .reveal .slides {
-            height: 100vh !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-        
-        /* Remove any margin/padding that might interfere */
-        .reveal .slides section {
             margin: 0 !important;
             padding: 2rem !important;
         }
         
         .reveal code {
             background: #2a2a2a;
-            padding: 2px 6px;
+            padding: 2px 8px;
             border-radius: 4px;
-            font-size: 0.75em;
+            font-size: 0.8em;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+        }
+        
+        .reveal pre {
+            width: 100%;
+            margin: 15px 0;
         }
         
         .reveal pre code {
             background: none;
-            padding: 0;
+            padding: 15px;
             max-height: 500px;
-            font-size: 1.4em;
+            font-size: 0.8em;
             line-height: 1.4;
         }
         
         .comparison-table {
             width: 100%;
-            margin: 20px 0;
+            margin: 20px auto;
             border-collapse: collapse;
+            font-size: 0.85em;
         }
         
         .comparison-table th {
             background: #333333;
             color: white;
-            padding: 8px;
+            padding: 12px;
             text-align: left;
-            font-size: 0.85em;
+            font-weight: 600;
+            border: 1px solid #444;
         }
         
         .comparison-table td {
-            padding: 8px;
-            border: 1px solid #666;
-            font-size: 0.8em;
+            padding: 10px;
+            border: 1px solid #444;
             color: #ffffff;
+            text-align: left;
+            background: #1a1a1a;
         }
         
         .highlight-box {
-            background: #333333;
-            border: 2px solid #666666;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-            font-size: 0.85em;
+            background: linear-gradient(135deg, #2a2a2a, #333333);
+            border: 2px solid #555;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px auto;
+            font-size: 0.9em;
             color: #ffffff;
+            max-width: 90%;
         }
         
         .two-columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 25px;
+            text-align: left;
+            width: 100%;
         }
         
-        .architecture-box {
+        .info-box {
             background: #1a1a1a;
-            border: 2px solid #666666;
+            border: 1px solid #444;
             border-radius: 8px;
-            padding: 12px;
-            margin: 8px 0;
-            font-size: 0.85em;
-            color: #ffffff;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: left;
         }
         
-        .architecture-box h3, .architecture-box h4 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-        
-        .clarity-box {
-            background: #1a1a1a;
-            border: 2px solid #666666;
-            border-radius: 8px;
-            padding: 12px;
-            margin: 8px 0;
-            font-size: 0.85em;
-            color: #ffffff;
-        }
-        
-        .clarity-box h3, .clarity-box h4 {
+        .info-box h3, .info-box h4 {
             margin-top: 0;
             margin-bottom: 10px;
             color: #ffffff;
         }
         
         .reveal .progress {
-            color: #ffffff;
+            color: #88ccff;
         }
         
         .reveal .controls {
-            color: #ffffff;
-        }
-        
-        .emoji-large {
-            font-size: 1.5em;
-            margin: 0 5px;
+            color: #88ccff;
         }
         
         .code-link {
-            color: #ffffff;
-            text-decoration: underline;
-            font-size: 0.8em;
-            display: block;
+            color: #88ccff;
+            text-decoration: none;
+            font-size: 0.7em;
+            display: inline-block;
             margin-top: 10px;
+            padding: 5px 10px;
+            background: #1a1a1a;
+            border-radius: 4px;
+            border: 1px solid #444;
+        }
+        
+        .code-link:hover {
+            background: #2a2a2a;
+            text-decoration: underline;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #88ccff;
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            line-height: 28px;
+            text-align: center;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .pro-tip {
+            background: #1a1a1a;
+            border-left: 4px solid #88ccff;
+            padding: 12px 15px;
+            margin: 15px auto;
+            font-size: 0.85em;
+            text-align: left;
+            max-width: 90%;
+        }
+        
+        .reveal ul, .reveal ol {
+            text-align: left;
+            display: inline-block;
+            max-width: 90%;
+        }
+        
+        .key-point {
+            background: linear-gradient(90deg, #2a2a2a, #1a1a1a);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            font-weight: 500;
+            border: 1px solid #444;
+            max-width: 85%;
+        }
+        
+        .section-divider {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            padding: 60px 40px;
+            border-radius: 20px;
+            border: 2px solid #444;
+        }
+        
+        .emoji-icon {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .reveal strong {
+            color: #88ccff;
+            font-weight: 600;
+        }
+        
+        .reveal a {
+            color: #88ccff;
+        }
+        
+        .reveal a:hover {
+            color: #aaddff;
         }
     </style>
 </head>
@@ -210,683 +255,876 @@
             
             <!-- Slide 1: Title -->
             <section>
-                <h1>Analytics Integration</h1>
-                <p style="margin-top: 50px;">Microsoft Clarity • Google Analytics • Real Implementation</p>
-                <p style="font-size: 0.8em; margin-top: 40px; color: #ffffff;">Navigate: Space/Arrow Keys | Overview: ESC</p>
+                <div class="section-divider">
+                    <h1>Analytics Integration</h1>
+                    <h3 style="color: #88ccff; margin-top: 30px;">From Zero to Full Implementation</h3>
+                    <p style="margin-top: 40px;">Microsoft Clarity • Google Analytics 4 • Google Tag Manager</p>
+                    <p style="font-size: 0.7em; margin-top: 30px; color: #999;">
+                        Navigate: <kbd>Space</kbd> or <kbd>→</kbd> | Overview: <kbd>ESC</kbd> | Fullscreen: <kbd>F</kbd>
+                    </p>
+                </div>
             </section>
             
-            <!-- Slide 2: Agenda -->
+            <!-- Slide 2: What You'll Learn -->
             <section>
-                <h2>📋 Agenda</h2>
-                <ol>
-                    <li>Analytics Fundamentals</li>
-                    <li>Microsoft Clarity: Free Session Recordings & Heatmaps</li>
-                    <li>Google Analytics 4 (GA4) Implementation</li>
-                    <li>Custom Events & Properties Deep Dive</li>
-                    <li>Real Code Examples from Our Codebase</li>
-                    <li>Implementation Patterns & Best Practices</li>
-                    <li>Data Pipeline: GA4 → BigQuery → Looker Studio</li>
-                </ol>
-                <div class="highlight-box" style="margin-top: 30px;">
-                    <p><strong>Repository:</strong> All code examples are from our live implementation</p>
+                <h2>🎯 What You'll Learn Today</h2>
+                <div class="key-point">
+                    Build a complete analytics system that tracks every meaningful user interaction
+                </div>
+                <div class="two-columns" style="margin-top: 30px;">
+                    <div class="info-box">
+                        <h4>📚 Concepts</h4>
+                        <ul>
+                            <li>Why analytics matter for your product</li>
+                            <li>Choosing the right analytics tools</li>
+                            <li>Event tracking fundamentals</li>
+                            <li>Custom properties and dimensions</li>
+                            <li>Data pipeline architecture</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4>🛠️ Implementation</h4>
+                        <ul>
+                            <li>Setting up Microsoft Clarity</li>
+                            <li>Implementing Google Analytics 4</li>
+                            <li>Configuring Google Tag Manager</li>
+                            <li>Writing tracking utilities</li>
+                            <li>Testing and debugging</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pro-tip">
+                    <strong>📦 Repository:</strong> All code is from our working implementation at
+                    <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity" target="_blank">
+                        github.com/ChakshuGautam/telemetry-ga-clarity
+                    </a>
                 </div>
             </section>
             
             <!-- Slide 3: Why Analytics Matter -->
             <section>
-                <h2>🎯 Why Analytics Matter</h2>
-                <div class="two-columns">
-                    <div>
-                        <h3>Business Value</h3>
-                        <ul>
-                            <li>User behavior insights</li>
-                            <li>Data-driven decisions</li>
-                            <li>ROI measurement</li>
-                            <li>Customer journey mapping</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Technical Benefits</h3>
-                        <ul>
-                            <li>Performance monitoring</li>
-                            <li>Error tracking</li>
-                            <li>Feature adoption</li>
-                            <li>A/B testing data</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="architecture-box" style="margin-top: 30px;">
-                    <strong>Key Insight:</strong> Analytics bridge the gap between code and business outcomes
-                </div>
-            </section>
-            
-            <!-- Part 1: Microsoft Clarity -->
-            
-            <!-- Slide 4: What is Microsoft Clarity -->
-            <section>
-                <h2>🔍 Microsoft Clarity: The Perfect Starting Point</h2>
-                <div class="two-columns">
-                    <div>
-                        <h3>✨ Features</h3>
-                        <ul>
-                            <li>Session recordings</li>
-                            <li>Heatmaps (click, scroll, area)</li>
-                            <li>Rage click detection</li>
-                            <li>Dead click tracking</li>
-                            <li>JavaScript error tracking</li>
-                            <li>Performance insights</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>🎉 Why Start Here?</h3>
-                        <ul>
-                            <li><strong>100% Free Forever</strong></li>
-                            <li>No traffic limits</li>
-                            <li>GDPR compliant</li>
-                            <li>5-minute setup</li>
-                            <li>No coding required</li>
-                            <li>Visual debugging</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clarity-box" style="margin-top: 20px;">
-                    <strong>Perfect for:</strong> Understanding user behavior before optimizing for conversion metrics
-                </div>
-            </section>
-            
-            <!-- Slide 5: Clarity Setup -->
-            <section>
-                <h2>⚡ Clarity Setup (5 minutes)</h2>
-                <div class="clarity-box">
-                    <h3>1. Get Your Tracking Code</h3>
-                    <p>Visit <strong>clarity.microsoft.com</strong> → Create project → Copy script</p>
-                </div>
-                <div class="clarity-box">
-                    <h3>2. Add to Your HTML Head</h3>
-                    <pre><code class="language-html">&lt;!-- From our index.html:16-23 --&gt;
-&lt;script type="text/javascript"&gt;
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "nx82kkx8r9");
-&lt;/script&gt;</code></pre>
-                </div>
+                <h2>Why Do We Need Analytics?</h2>
                 <div class="highlight-box">
-                    <strong>That's it!</strong> Clarity starts collecting data immediately
+                    <p style="font-size: 1.2em; margin: 0;">
+                        <strong>Without data, you're just another person with an opinion</strong>
+                    </p>
+                </div>
+                <div class="two-columns" style="margin-top: 30px;">
+                    <div class="info-box">
+                        <h4 style="color: #ff6666;">❌ Without Analytics</h4>
+                        <ul style="color: #ccc;">
+                            <li>"I think users like this feature"</li>
+                            <li>"The checkout seems broken"</li>
+                            <li>"Traffic feels lower lately"</li>
+                            <li>"Users probably want X"</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-style: italic; color: #999;">
+                            Decisions based on assumptions
+                        </p>
+                    </div>
+                    <div class="info-box">
+                        <h4 style="color: #66ff66;">✅ With Analytics</h4>
+                        <ul style="color: #ccc;">
+                            <li>"87% of users engage with this feature"</li>
+                            <li>"23% drop at payment (3.2s load)"</li>
+                            <li>"2,341 DAU, down 5% WoW"</li>
+                            <li>"Users who want X: 12 of 2,000"</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-style: italic; color: #999;">
+                            Data-driven decisions
+                        </p>
+                    </div>
                 </div>
             </section>
             
-            <!-- Slide 6: Clarity Custom Events -->
+            <!-- PART 1: MICROSOFT CLARITY -->
+            
+            <!-- Slide 4: Part 1 Divider -->
             <section>
-                <h2>🎨 Clarity Custom Events</h2>
-                <pre><code class="language-javascript">// From src/utils/tracking.ts:31-39
+                <div class="section-divider">
+                    <div class="emoji-icon">🔍</div>
+                    <h1 style="color: #88ccff;">Part 1</h1>
+                    <h2>Start with Microsoft Clarity</h2>
+                    <p style="margin-top: 30px;">See exactly what your users are doing</p>
+                </div>
+            </section>
+            
+            <!-- Slide 5: What is Clarity -->
+            <section>
+                <h2>What is Microsoft Clarity?</h2>
+                <div class="key-point">
+                    <strong>It's like having a camera on every user's screen</strong>
+                    <br>Watch exactly how users interact with your app
+                </div>
+                
+                <div class="two-columns" style="margin-top: 30px;">
+                    <div class="info-box">
+                        <h4>🎥 Features</h4>
+                        <ul>
+                            <li><strong>Session Recordings</strong><br>
+                                Watch real user sessions</li>
+                            <li><strong>Heatmaps</strong><br>
+                                See where users click/scroll</li>
+                            <li><strong>Insights</strong><br>
+                                Rage clicks, dead clicks, errors</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4>💰 Why Start Here?</h4>
+                        <ul>
+                            <li><strong>100% Free</strong><br>
+                                No credit card, no limits</li>
+                            <li><strong>5 Minute Setup</strong><br>
+                                Just add one script</li>
+                            <li><strong>Instant Value</strong><br>
+                                See problems immediately</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pro-tip">
+                    <strong>💡 Pro Tip:</strong> Install Clarity first to understand user behavior visually,
+                    then add GA4 for quantitative metrics
+                </div>
+            </section>
+            
+            <!-- Slide 6: Setting Up Clarity -->
+            <section>
+                <h2>Setting Up Clarity in 3 Steps</h2>
+                
+                <div class="info-box" style="margin-bottom: 15px;">
+                    <p><span class="step-number">1</span>
+                    Go to <a href="https://clarity.microsoft.com" target="_blank">clarity.microsoft.com</a>
+                    → Sign in → Create new project</p>
+                </div>
+                
+                <div class="info-box" style="margin-bottom: 15px;">
+                    <p><span class="step-number">2</span>
+                    Enter your website URL → Get your unique project ID</p>
+                </div>
+                
+                <div class="info-box">
+                    <p><span class="step-number">3</span>
+                    Add this script to your HTML <code>&lt;head&gt;</code>:</p>
+                </div>
+                
+                <pre><code class="language-html">&lt;script type="text/javascript"&gt;
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
+&lt;/script&gt;</code></pre>
+                
+                <div class="highlight-box">
+                    ✅ <strong>Done!</strong> Clarity starts recording sessions immediately
+                </div>
+            </section>
+            
+            <!-- Slide 7: Our Clarity Implementation -->
+            <section>
+                <h2>Our Clarity Implementation</h2>
+                <pre><code class="language-html">&lt;!-- telemetry-demo/index.html --&gt;
+&lt;script type="text/javascript"&gt;
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "t1ori1zqey");
+&lt;/script&gt;</code></pre>
+                
+                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/index.html#L27-L33" 
+                   class="code-link" target="_blank">
+                   View in GitHub →
+                </a>
+                
+                <div class="info-box" style="margin-top: 30px;">
+                    <h4>Key Points</h4>
+                    <ul>
+                        <li>Project ID: <code>t1ori1zqey</code> - unique to each project</li>
+                        <li>Loads asynchronously - won't slow down your page</li>
+                        <li>GDPR compliant - no cookies by default</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Slide 8: Custom Tags in Clarity -->
+            <section>
+                <h2>Adding Custom Tags to Sessions</h2>
+                <div class="pro-tip">
+                    <strong>Why Custom Tags?</strong> Filter recordings by user type, feature usage, or any custom criteria
+                </div>
+                
+                <pre><code class="language-typescript">// src/utils/tracking.ts
 export const trackClarityCustomEvent = (
   eventName: string,
   customTag?: Record&lt;string, any&gt;
 ) => {
   if (typeof window !== 'undefined' && window.clarity) {
     window.clarity('set', eventName, customTag);
-    console.log('Clarity Custom Event:', eventName, customTag);
+    console.log('🔍 Clarity Event:', eventName, customTag);
   }
 };</code></pre>
-                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/utils/tracking.ts#L31-L39" class="code-link" target="_blank">src/utils/tracking.ts:31-39 →</a>
-                <div class="two-columns" style="margin-top: 20px;">
-                    <div class="clarity-box">
-                        <h4>📊 What This Does</h4>
-                        <p>Tags sessions with custom metadata for filtering and analysis</p>
-                    </div>
-                    <div class="clarity-box">
-                        <h4>🔍 Use Cases</h4>
-                        <p>User type, feature usage, error states, A/B test variants</p>
-                    </div>
+                
+                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/utils/tracking.ts#L31-L39" 
+                   class="code-link" target="_blank">
+                   View in GitHub →
+                </a>
+                
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <strong>Example Use Cases:</strong>
+                    <ul style="margin: 10px 0;">
+                        <li>Tag premium vs free users</li>
+                        <li>Mark sessions with errors</li>
+                        <li>Identify feature usage patterns</li>
+                    </ul>
                 </div>
             </section>
             
-            <!-- Slide 7: Real Clarity Implementation -->
+            <!-- Slide 9: Real Example -->
             <section>
-                <h2>💡 Real Clarity Examples from Our Code</h2>
-                <pre><code class="language-javascript">// From src/pages/HomePage.tsx:67-76
+                <h2>Real Example: Tracking Sign-ups</h2>
+                <pre><code class="language-typescript">// src/pages/HomePage.tsx
 const handleSignupClick = () => {
+  // Send to Google Analytics
   trackGTMEvent('sign_up', {
     method: 'email',
     event_category: 'engagement',
   });
   
-  trackClarityCustomEvent('SignupButtonClick', { 
+  // Tag this Clarity session
+  trackClarityCustomEvent('SignupAttempt', { 
     page: 'home',
     method: 'email' 
   });
 };</code></pre>
-                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/HomePage.tsx#L67-L76" class="code-link" target="_blank">src/pages/HomePage.tsx:67-76 →</a>
-                <div class="clarity-box" style="margin-top: 20px;">
-                    <strong>Result:</strong> You can filter Clarity sessions to see only users who clicked signup, then watch their journey
-                </div>
-            </section>
-            
-            <!-- Part 2: Google Analytics 4 -->
-            
-            <!-- Slide 8: Now Let's Add Google Analytics -->
-            <section>
-                <h2>📊 Now Let's Add Google Analytics</h2>
-                <div class="architecture-box">
-                    <h3>Why GA4 After Clarity?</h3>
-                    <p>Clarity shows you <strong>what</strong> users do. GA4 shows you <strong>how many</strong> and <strong>when</strong>.</p>
-                </div>
-                <div class="two-columns">
-                    <div>
-                        <h3>🔍 Clarity Strengths</h3>
-                        <ul>
-                            <li>Visual user behavior</li>
-                            <li>Session recordings</li>
-                            <li>UX problem identification</li>
-                            <li>Qualitative insights</li>
-                        </ul>
+                
+                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/HomePage.tsx#L39-L50" 
+                   class="code-link" target="_blank">
+                   View in GitHub →
+                </a>
+                
+                <div class="two-columns" style="margin-top: 25px;">
+                    <div class="info-box">
+                        <h4>In Clarity Dashboard</h4>
+                        <p>Filter: <code>SignupAttempt = true</code></p>
+                        <p>→ See only users who tried to sign up</p>
                     </div>
-                    <div>
-                        <h3>📈 GA4 Strengths</h3>
-                        <ul>
-                            <li>Quantitative metrics</li>
-                            <li>Conversion funnels</li>
-                            <li>Audience segmentation</li>
-                            <li>BigQuery export</li>
-                        </ul>
+                    <div class="info-box">
+                        <h4>What You Learn</h4>
+                        <p>• What did they do before?</p>
+                        <p>• Did they complete it?</p>
+                        <p>• Where did they struggle?</p>
                     </div>
                 </div>
             </section>
             
-            <!-- Slide 9: GA4 Implementation Approaches -->
+            <!-- PART 2: GOOGLE ANALYTICS -->
+            
+            <!-- Slide 10: Part 2 Divider -->
             <section>
-                <h2>🔀 GA4 Implementation Approaches</h2>
-                <table class="comparison-table">
+                <div class="section-divider">
+                    <div class="emoji-icon">📊</div>
+                    <h1 style="color: #88ccff;">Part 2</h1>
+                    <h2>Add Google Analytics 4</h2>
+                    <p style="margin-top: 30px;">Measure everything with numbers</p>
+                </div>
+            </section>
+            
+            <!-- Slide 11: Why GA4 -->
+            <section>
+                <h2>Why Add Google Analytics?</h2>
+                <div class="key-point">
+                    Clarity shows <strong>HOW</strong> users behave<br>
+                    GA4 shows <strong>HOW MANY</strong> and <strong>WHEN</strong>
+                </div>
+                
+                <table class="comparison-table" style="margin-top: 30px;">
                     <thead>
                         <tr>
-                            <th>Approach</th>
-                            <th>Pros</th>
-                            <th>Cons</th>
-                            <th>Best For</th>
+                            <th>Question</th>
+                            <th>Clarity Answer</th>
+                            <th>GA4 Answer</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Google Tag Manager</strong></td>
-                            <td>No-code changes, Marketing autonomy</td>
-                            <td>Extra complexity</td>
-                            <td>Marketing-heavy teams</td>
+                            <td><strong>User confusion?</strong></td>
+                            <td>Watch recording of rage clicks</td>
+                            <td>15% drop-off at step 3</td>
                         </tr>
                         <tr>
-                            <td><strong>React-GA4</strong></td>
-                            <td>Simple, Type-safe</td>
-                            <td>Code changes required</td>
-                            <td>Developer-led teams</td>
+                            <td><strong>Feature popular?</strong></td>
+                            <td>See heatmap of button</td>
+                            <td>2,341 clicks this week (+12%)</td>
                         </tr>
                         <tr>
-                            <td><strong>Direct gtag</strong></td>
-                            <td>Full control</td>
-                            <td>More complexity</td>
-                            <td>Custom requirements</td>
+                            <td><strong>Performance issue?</strong></td>
+                            <td>User waiting on slow page</td>
+                            <td>Avg load: 3.2s (P95: 7.1s)</td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="highlight-box">
-                    <strong>Our Implementation:</strong> We use GTM for flexibility + React-GA4 for direct control
+                
+                <div class="highlight-box" style="margin-top: 25px;">
+                    <strong>Together = Complete Picture:</strong> Visual behavior + Quantitative metrics
                 </div>
             </section>
             
-            <!-- Slide 10: GTM Setup -->
+            <!-- Slide 12: Implementation Approaches -->
             <section>
-                <h2>🏷️ Google Tag Manager Setup</h2>
-                <pre><code class="language-html">&lt;!-- From index.html:9-15 --&gt;
+                <h2>Three Ways to Implement GA4</h2>
+                
+                <div class="info-box" style="margin-bottom: 15px;">
+                    <h3>1️⃣ Direct gtag.js</h3>
+                    <p>✅ Simple and direct | ❌ Code changes for updates</p>
+                    <code style="font-size: 0.8em;">window.gtag('event', 'purchase', {...})</code>
+                </div>
+                
+                <div class="info-box" style="margin-bottom: 15px; border: 2px solid #88ccff;">
+                    <h3>2️⃣ Google Tag Manager (Recommended)</h3>
+                    <p>✅ No-code updates | ✅ Marketing autonomy | ✅ Multiple tools</p>
+                    <code style="font-size: 0.8em;">window.dataLayer.push({event: 'purchase', ...})</code>
+                </div>
+                
+                <div class="info-box">
+                    <h3>3️⃣ React-GA4 Library</h3>
+                    <p>✅ Type-safe | ✅ React hooks | ❌ Only for React</p>
+                    <code style="font-size: 0.8em;">ReactGA.event('purchase', {...})</code>
+                </div>
+                
+                <div class="pro-tip" style="margin-top: 20px;">
+                    <strong>Our Approach:</strong> We use GTM + direct gtag for maximum flexibility
+                </div>
+            </section>
+            
+            <!-- Slide 13: GTM Setup -->
+            <section>
+                <h2>Setting Up Google Tag Manager</h2>
+                
+                <pre><code class="language-html">&lt;!-- Add to &lt;head&gt; --&gt;
 &lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MT9MWSLQ');&lt;/script&gt;</code></pre>
-                <div class="two-columns" style="margin-top: 20px;">
-                    <div class="architecture-box">
-                        <h4>📦 DataLayer Function</h4>
-                        <pre><code class="language-javascript">// src/utils/tracking.ts:8-19
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXX');&lt;/script&gt;
+
+&lt;!-- Add after &lt;body&gt; --&gt;
+&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</code></pre>
+                
+                <div class="info-box" style="margin-top: 20px;">
+                    <h4>Our Implementation</h4>
+                    <ul>
+                        <li>Container ID: <code>GTM-MT9MWSLQ</code></li>
+                        <li>Location: <code>index.html</code> lines 9-15 and 27-30</li>
+                        <li>Creates global <code>dataLayer</code> array</li>
+                    </ul>
+                </div>
+                
+                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/index.html#L9-L15" 
+                   class="code-link" target="_blank">
+                   View in GitHub →
+                </a>
+            </section>
+            
+            <!-- Slide 14: Tracking Function -->
+            <section>
+                <h2>Our Tracking Implementation</h2>
+                <pre><code class="language-typescript">// src/utils/tracking.ts
 export const trackGTMEvent = (
   eventName: string,
   parameters?: Record&lt;string, any&gt;
 ) => {
-  if (typeof window !== 'undefined' && window.dataLayer) {
-    window.dataLayer.push({
-      event: eventName,
-      ...parameters
-    });
+  if (typeof window !== 'undefined') {
+    // Send to GTM via dataLayer
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: eventName,
+        ...parameters
+      });
+      console.log('GTM Event:', eventName, parameters);
+    }
+    
+    // Also send directly to GA4
+    if (window.gtag) {
+      window.gtag('event', eventName, parameters);
+      console.log('GA4 Direct:', eventName, parameters);
+    }
   }
 };</code></pre>
-                    </div>
-                    <div class="architecture-box">
-                        <h4>⚡ Container: GTM-MT9MWSLQ</h4>
-                        <p>Tags fire based on dataLayer events</p>
-                        <p>Marketing team can modify without deployments</p>
-                    </div>
+                
+                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/utils/tracking.ts#L9-L29" 
+                   class="code-link" target="_blank">
+                   View in GitHub →
+                </a>
+            </section>
+            
+            <!-- PART 3: CUSTOM PROPERTIES -->
+            
+            <!-- Slide 15: Part 3 Divider -->
+            <section>
+                <div class="section-divider">
+                    <div class="emoji-icon">🎯</div>
+                    <h1 style="color: #88ccff;">Part 3</h1>
+                    <h2>Custom Properties & Events</h2>
+                    <p style="margin-top: 30px;">Turn raw data into business insights</p>
                 </div>
             </section>
             
-            <!-- Part 3: Custom Events & Properties -->
-            
-            <!-- Slide 11: Event Fundamentals -->
+            <!-- Slide 16: Event Structure -->
             <section>
-                <h2>🔬 Event Fundamentals</h2>
-                <div class="architecture-box">
-                    <h3>Basic Event Structure</h3>
-                    <pre><code class="language-javascript">{
-  event_name: "button_click",      // Required: what happened
-  event_category: "engagement",    // Context: type of event  
-  event_label: "hero_cta",        // Specifics: which element
-  value: 1,                       // Numeric: count/amount
-  // Custom properties for deeper analysis
+                <h2>Anatomy of a Good Event</h2>
+                <pre><code class="language-javascript">{
+  // What happened?
+  event_name: "button_click",
+  
+  // Standard GA4 parameters
+  event_category: "engagement",
+  event_label: "hero_cta",
+  value: 1,
+  
+  // Your custom properties
   button_text: "Get Started",
   page_section: "hero",
-  user_type: "anonymous"
+  user_type: "free",
+  ab_test_variant: "variant_b",
+  session_duration_seconds: 145
 }</code></pre>
-                </div>
-                <div class="highlight-box">
-                    <strong>Key Principle:</strong> Events answer "what happened", properties answer "under what conditions"
+                
+                <div class="key-point" style="margin-top: 25px;">
+                    <strong>Rule of Thumb:</strong><br>
+                    Events answer "what happened"<br>
+                    Properties answer "under what conditions"
                 </div>
             </section>
             
-            <!-- Slide 12: Real Custom Properties Examples -->
+            <!-- Slide 17: Real Example - Basic -->
             <section>
-                <h2>🎨 Real Custom Properties from Our Codebase</h2>
-                <pre><code class="language-javascript">// From src/pages/HomePage.tsx:7-26
+                <h2>Example: Enhanced Button Tracking</h2>
+                <pre><code class="language-typescript">// src/pages/HomePage.tsx
 const handleButtonClick = () => {
   const newCount = clickCount + 1;
   setClickCount(newCount);
   
   trackGTMEvent('button_click', {
+    // Standard parameters
     event_category: 'engagement',
     event_label: 'home_page_button',
     value: newCount,
-    // 🎯 Custom properties for business insights
+    
+    // Custom business context
     button_text: 'Track Engagement Event',
     page_section: 'hero',
     click_count: newCount,
-    timestamp: new Date().toISOString(),
-    session_duration: Math.floor((Date.now() - performance.timing.navigationStart) / 1000)
+    session_duration: Math.floor((Date.now() - startTime) / 1000),
+    viewport_width: window.innerWidth,
+    is_mobile: window.innerWidth < 768
   });
-  
-  trackClarityCustomEvent('HomeButtonClick', { clickCount: newCount });
 };</code></pre>
-                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/HomePage.tsx#L7-L26" class="code-link" target="_blank">src/pages/HomePage.tsx:7-26 →</a>
+                
+                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/HomePage.tsx#L7-L24" 
+                   class="code-link" target="_blank">
+                   View in GitHub →
+                </a>
             </section>
             
-            <!-- Slide 13: Why Custom Properties Matter -->
+            <!-- Slide 18: E-commerce Example -->
             <section>
-                <h2>💡 Why Custom Properties Are Game-Changers</h2>
+                <h2>Example: E-commerce Events</h2>
+                <pre><code class="language-typescript">// src/pages/HomePage.tsx
+trackGTMEvent('purchase', {
+  // Standard GA4 e-commerce parameters
+  transaction_id: `order_${Date.now()}`,
+  value: 99.99,
+  currency: 'USD',
+  items: [{
+    item_id: 'SKU123',
+    item_name: 'Premium Plan',
+    item_category: 'Subscription',
+    price: 99.99,
+    quantity: 1
+  }],
+  
+  // Custom business properties
+  payment_type: 'credit_card',
+  coupon_code: 'SAVE20',
+  is_first_purchase: true,
+  referral_source: 'email_campaign',
+  checkout_duration_seconds: 45
+});</code></pre>
+                
+                <div class="pro-tip" style="margin-top: 20px;">
+                    <strong>💡 Tip:</strong> GA4 automatically processes standard e-commerce parameters
+                    for built-in reports
+                </div>
+            </section>
+            
+            <!-- Slide 19: Why Custom Properties Matter -->
+            <section>
+                <h2>The Power of Custom Properties</h2>
+                
                 <div class="two-columns">
-                    <div>
-                        <h3>🔍 Without Custom Properties</h3>
-                        <ul>
-                            <li>"Users clicked buttons 1,000 times"</li>
+                    <div class="info-box">
+                        <h4 style="color: #ff6666;">Without Custom Properties</h4>
+                        <p style="font-size: 0.9em; color: #ccc;">
+                            "1,000 button clicks happened"
+                        </p>
+                        <ul style="color: #999; font-size: 0.85em;">
                             <li>Basic event counts</li>
                             <li>Limited segmentation</li>
-                            <li>Surface-level insights</li>
+                            <li>No context</li>
                         </ul>
                     </div>
-                    <div>
-                        <h3>🚀 With Custom Properties</h3>
-                        <ul>
-                            <li>"Premium users click 'Export' 3x more than free users"</li>
-                            <li>Behavior by user type</li>
-                            <li>Feature usage patterns</li>
-                            <li>Actionable business insights</li>
+                    <div class="info-box">
+                        <h4 style="color: #66ff66;">With Custom Properties</h4>
+                        <p style="font-size: 0.9em; color: #ccc;">
+                            "Premium users on mobile clicked 3x more than free users on desktop"
+                        </p>
+                        <ul style="color: #999; font-size: 0.85em;">
+                            <li>User segmentation</li>
+                            <li>Behavior patterns</li>
+                            <li>Business insights</li>
                         </ul>
                     </div>
                 </div>
-                <div class="highlight-box" style="margin-top: 20px;">
-                    <strong>Business Impact:</strong> Custom properties turn raw events into strategic insights
+                
+                <div class="highlight-box" style="margin-top: 25px;">
+                    <strong>Real Example from Our Data:</strong><br>
+                    "Users who see variant_b convert 23% better on mobile devices 
+                    when session duration exceeds 2 minutes"
                 </div>
             </section>
             
-            <!-- Slide 14: E-commerce Event Example -->
-            <section>
-                <h2>🛒 E-commerce Custom Properties</h2>
-                <pre><code class="language-javascript">// From src/pages/HomePage.tsx:29-55
-const handlePurchaseClick = () => {
-  trackGTMEvent('purchase', {
-    // 📊 Standard GA4 e-commerce parameters
-    transaction_id: `demo_${Date.now()}`,
-    value: 25.42,
-    currency: 'USD',
-    items: [{
-      item_id: 'SKU123',
-      item_name: 'Demo Product',
-      item_category: 'Electronics',
-      item_brand: 'TechCorp',
-      price: 25.42,
-      quantity: 1
-    }],
-    // 🎯 Custom business properties
-    payment_type: 'credit_card',
-    coupon: 'DEMO20',
-    is_first_purchase: false
-  });
-};</code></pre>
-                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/HomePage.tsx#L29-L55" class="code-link" target="_blank">src/pages/HomePage.tsx:29-55 →</a>
-            </section>
+            <!-- PART 4: IMPLEMENTATION PATTERNS -->
             
-            <!-- Slide 15: Advanced Custom Properties -->
+            <!-- Slide 20: Part 4 Divider -->
             <section>
-                <h2>🔧 Advanced Custom Properties Pattern</h2>
-                <pre><code class="language-javascript">// From src/pages/CustomPropertiesPage.tsx:14-32
-const handleUserEvent = () => {
-  trackGTMEvent('user_profile_update', {
-    // 👤 User context properties
-    user_id: formData.userId,
-    user_properties: {
-      account_type: formData.userType,
-      subscription_level: 'premium',
-      signup_date: '2024-01-15',
-      feature_flags: ['advanced_analytics', 'api_access']
-    },
-    // 📊 Interaction context
-    page_section: 'profile_settings',
-    form_completion_time: 45000, // milliseconds
-    fields_changed: ['email', 'notification_preferences'],
-    // 🎯 Business metrics
-    ltv_segment: 'high_value',
-    engagement_score: 85
-  });
-};</code></pre>
-                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/CustomPropertiesPage.tsx#L14-L32" class="code-link" target="_blank">src/pages/CustomPropertiesPage.tsx:14-32 →</a>
-            </section>
-            
-            <!-- Slide 16: Form Tracking with Field Details -->
-            <section>
-                <h2>📝 Form Tracking with Rich Context</h2>
-                <pre><code class="language-javascript">// From src/pages/CustomPropertiesPage.tsx:112-135
-const handleFormEvent = () => {
-  trackGTMEvent('form_interaction', {
-    form_id: 'contact_form',
-    form_name: 'Contact Us',
-    
-    // 🔍 Field-level tracking for UX optimization
-    field_interactions: {
-      email_field: { focus_time: 2000, error_count: 0 },
-      message_field: { focus_time: 15000, char_count: 156 },
-      submit_attempts: 1
-    },
-    
-    // 📊 Form performance metrics
-    form_start_time: startTime,
-    form_completion_time: Date.now() - startTime,
-    validation_errors: [],
-    
-    // 🎯 Conversion context
-    traffic_source: 'organic_search',
-    page_scroll_depth: 75,
-    previous_page: '/pricing'
-  });
-};</code></pre>
-                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/CustomPropertiesPage.tsx#L112-L135" class="code-link" target="_blank">src/pages/CustomPropertiesPage.tsx:112-135 →</a>
-            </section>
-            
-            <!-- Slide 17: Content Engagement Properties -->
-            <section>
-                <h2>📖 Content Engagement Tracking</h2>
-                <pre><code class="language-javascript">// From src/pages/CustomPropertiesPage.tsx:35-58
-const handleContentEvent = () => {
-  trackGTMEvent('content_engagement', {
-    // ⏱️ Standard engagement metrics
-    engagement_time_msec: 30000,
-    
-    // 📄 Content metadata for analysis
-    content_id: formData.contentId,
-    content_type: 'blog_post',
-    content_category: 'tutorial',
-    content_tags: ['analytics', 'implementation', 'react'],
-    
-    // 🔍 User interaction details
-    scroll_depth_percentage: 65,
-    reading_speed_wpm: 200,
-    
-    // 💼 Business context
-    content_author: 'data_team',
-    publish_date: '2024-01-20',
-    content_tier: 'premium',
-    conversion_goal: 'newsletter_signup'
-  });
-};</code></pre>
-                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/pages/CustomPropertiesPage.tsx#L35-L58" class="code-link" target="_blank">src/pages/CustomPropertiesPage.tsx:35-58 →</a>
-            </section>
-            
-            <!-- Part 4: Implementation Patterns -->
-            
-            <!-- Slide 18: Centralized Tracking Pattern -->
-            <section>
-                <h2>🛠️ Centralized Tracking Pattern</h2>
-                <pre><code class="language-javascript">// From src/utils/tracking-comparison.ts:149-162
-export const trackWithAllMethods = (
-  eventName: string,
-  parameters?: Record&lt;string, any&gt;
-) => {
-  // Send to Google Tag Manager
-  trackWithDataLayer.event(eventName, parameters);
-  
-  // Send to React-GA4 (if initialized)
-  if (ReactGA.isInitialized) {
-    trackWithReactGA4.event(eventName, parameters);
-  }
-  
-  // Also track in Clarity for session filtering
-  trackClarityEvent(eventName, parameters);
-};</code></pre>
-                <div class="highlight-box">
-                    <strong>Benefit:</strong> Send the same event to multiple analytics platforms simultaneously
+                <div class="section-divider">
+                    <div class="emoji-icon">🛠️</div>
+                    <h1 style="color: #88ccff;">Part 4</h1>
+                    <h2>Implementation Patterns</h2>
+                    <p style="margin-top: 30px;">Production-ready code patterns</p>
                 </div>
             </section>
             
-            <!-- Slide 19: Error-Safe Implementation -->
+            <!-- Slide 21: Page Tracking -->
             <section>
-                <h2>🛡️ Error-Safe Implementation</h2>
-                <pre><code class="language-javascript">// Defensive coding pattern
-export const trackEvent = (eventName: string, properties?: any) => {
-  try {
-    // Check if analytics tools are loaded
-    if (typeof window === 'undefined') return;
-    
-    // GTM tracking with fallback
-    if (window.dataLayer) {
-      window.dataLayer.push({
-        event: eventName,
-        ...properties,
-        timestamp: new Date().toISOString()
-      });
-    }
-    
-    // Clarity tracking with fallback
-    if (window.clarity) {
-      window.clarity('set', eventName, properties);
-    }
-    
-    // Development debugging
-    if (process.env.NODE_ENV === 'development') {
-      console.log('📊 Event tracked:', { eventName, properties });
-    }
-  } catch (error) {
-    // Never break the user experience for analytics
-    console.warn('Analytics tracking failed:', error);
-  }
-};</code></pre>
-            </section>
-            
-            <!-- Slide 20: Route Tracking -->
-            <section>
-                <h2>🔄 Automatic Route Tracking</h2>
-                <pre><code class="language-javascript">// From src/App.tsx:48-58
+                <h2>Automatic Page View Tracking</h2>
+                <pre><code class="language-typescript">// src/App.tsx
 function AppContent() {
   const location = useLocation();
-
+  
   useEffect(() => {
     const pageTitles: Record&lt;string, string&gt; = {
       '/': 'Home',
-      '/about': 'About', 
-      '/comparison': 'Comparison',
-      '/custom-properties': 'Custom Properties Demo'
+      '/about': 'About',
+      '/custom-properties': 'Custom Properties'
     };
     
     const pageTitle = pageTitles[location.pathname] || 'Unknown';
     
-    // Track page view with custom properties
+    // Track page view with context
     trackPageView(location.pathname, pageTitle);
-  }, [location]);
+  }, [location]); // Runs on every route change
+  
+  return &lt;Routes&gt;...&lt;/Routes&gt;;
 }</code></pre>
-                <div class="architecture-box">
-                    <strong>Auto-tracks:</strong> All route changes with page titles and custom context
+                
+                <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/blob/main/telemetry-demo/src/App.tsx#L94-L103" 
+                   class="code-link" target="_blank">
+                   View in GitHub →
+                </a>
+                
+                <div class="pro-tip">
+                    <strong>Result:</strong> Every navigation is automatically tracked with page title and path
                 </div>
             </section>
             
-            <!-- Part 5: Testing & Debugging -->
-            
-            <!-- Slide 21: Testing Strategy -->
+            <!-- Slide 22: Error-Safe Pattern -->
             <section>
-                <h2>🧪 Testing Your Analytics Implementation</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                    <div class="clarity-box">
+                <h2>Production-Safe Implementation</h2>
+                <pre><code class="language-typescript">export const safeTrackEvent = (
+  eventName: string, 
+  properties?: any
+) => {
+  try {
+    // Check environment
+    if (typeof window === 'undefined') return;
+    
+    // Check if scripts loaded
+    if (!window.dataLayer && !window.gtag) {
+      console.warn('Analytics not loaded');
+      return;
+    }
+    
+    // Send event
+    trackGTMEvent(eventName, {
+      ...properties,
+      timestamp: new Date().toISOString(),
+      page_url: window.location.href
+    });
+    
+  } catch (error) {
+    // Never break the app for analytics
+    console.error('Tracking failed:', error);
+  }
+};</code></pre>
+                
+                <div class="highlight-box">
+                    <strong>Key Principle:</strong> Analytics should never break user experience
+                </div>
+            </section>
+            
+            <!-- Slide 23: Testing -->
+            <section>
+                <h2>Testing Your Implementation</h2>
+                
+                <div class="two-columns">
+                    <div class="info-box">
                         <h4>🔍 Clarity Testing</h4>
-                        <p>Visit your site → Check Clarity dashboard for real-time sessions</p>
+                        <ol style="font-size: 0.85em;">
+                            <li>Install and browse your site</li>
+                            <li>Go to Clarity dashboard</li>
+                            <li>See sessions in real-time</li>
+                            <li>Check custom tags</li>
+                        </ol>
                     </div>
-                    <div class="architecture-box">
-                        <h4>🏷️ GTM Testing</h4>
-                        <p>Use GTM Preview Mode to debug tags before publishing</p>
-                    </div>
-                    <div class="architecture-box">
+                    <div class="info-box">
                         <h4>📊 GA4 Testing</h4>
-                        <p>Use GA4 DebugView for real-time event validation</p>
-                    </div>
-                    <div class="architecture-box">
-                        <h4>🛠️ Browser DevTools</h4>
-                        <p>Check Network tab for collect requests and console logs</p>
+                        <ol style="font-size: 0.85em;">
+                            <li>Open GA4 DebugView</li>
+                            <li>Browse your site</li>
+                            <li>See events instantly</li>
+                            <li>Verify parameters</li>
+                        </ol>
                     </div>
                 </div>
-                <pre><code class="language-javascript">// Console debugging commands
-window.dataLayer; // Check GTM data layer
-window.clarity; // Check Clarity availability
-window.gtag; // Check GA4 gtag function</code></pre>
+                
+                <div class="info-box" style="margin-top: 20px;">
+                    <h4>🛠️ Browser Console</h4>
+                    <pre><code class="language-javascript">// Check if loaded
+console.log(window.dataLayer);  // GTM events
+console.log(window.clarity);    // Clarity object
+console.log(window.gtag);       // GA4 function
+
+// Manual test
+window.dataLayer.push({
+  event: 'test_event',
+  test_param: 'test_value'
+});</code></pre>
+                </div>
             </section>
             
-            <!-- Slide 22: Common Pitfalls -->
+            <!-- Slide 24: Common Mistakes -->
             <section>
-                <h2>⚠️ Common Pitfalls & Solutions</h2>
+                <h2>Common Mistakes to Avoid</h2>
+                
                 <table class="comparison-table">
-                    <tr>
-                        <th>Pitfall</th>
-                        <th>Solution</th>
-                        <th>Code Example</th>
-                    </tr>
-                    <tr>
-                        <td>Tracking before script loads</td>
-                        <td>Check availability</td>
-                        <td><code>if (window.clarity) {...}</code></td>
-                    </tr>
-                    <tr>
-                        <td>Duplicate events</td>
-                        <td>Centralize tracking calls</td>
-                        <td>Single <code>trackEvent()</code> function</td>
-                    </tr>
-                    <tr>
-                        <td>Missing custom properties</td>
-                        <td>Use TypeScript interfaces</td>
-                        <td><code>interface EventProps</code></td>
-                    </tr>
-                    <tr>
-                        <td>PII in events</td>
-                        <td>Sanitize data first</td>
-                        <td>Hash emails, remove names</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Mistake</th>
+                            <th>Problem</th>
+                            <th>Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tracking before load</strong></td>
+                            <td>Events lost</td>
+                            <td>Check <code>if (window.gtag)</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Too many properties</strong></td>
+                            <td>GA4 limit: 25 per event</td>
+                            <td>Send only essential data</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PII in events</strong></td>
+                            <td>Privacy violations</td>
+                            <td>Hash/remove emails, names</td>
+                        </tr>
+                        <tr>
+                            <td><strong>No error handling</strong></td>
+                            <td>App crashes</td>
+                            <td>Wrap in try-catch</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Duplicate tracking</strong></td>
+                            <td>Inflated metrics</td>
+                            <td>Centralize tracking calls</td>
+                        </tr>
+                    </tbody>
                 </table>
+                
+                <div class="pro-tip" style="margin-top: 20px;">
+                    <strong>Remember:</strong> Test in development, verify in staging, monitor in production
+                </div>
             </section>
             
-            <!-- Part 6: Data Pipeline -->
+            <!-- PART 5: DATA PIPELINE -->
             
-            <!-- Slide 23: GA4 to BigQuery -->
+            <!-- Slide 25: Part 5 Divider -->
             <section>
-                <h2>🔗 GA4 to BigQuery Integration</h2>
-                <div class="architecture-box">
-                    <h3>Setup Steps</h3>
-                    <ol>
-                        <li>Enable BigQuery Export in GA4 Admin</li>
-                        <li>Link Google Cloud Project</li>
-                        <li>Choose export frequency (Daily recommended for cost)</li>
-                        <li>Configure dataset location</li>
+                <div class="section-divider">
+                    <div class="emoji-icon">🔗</div>
+                    <h1 style="color: #88ccff;">Part 5</h1>
+                    <h2>Data Pipeline & Analysis</h2>
+                    <p style="margin-top: 30px;">From events to insights</p>
+                </div>
+            </section>
+            
+            <!-- Slide 26: GA4 to BigQuery -->
+            <section>
+                <h2>Exporting to BigQuery</h2>
+                
+                <div class="info-box" style="margin-bottom: 15px;">
+                    <h4>Setup Process</h4>
+                    <ol style="font-size: 0.85em;">
+                        <li>GA4 Admin → BigQuery Links → Link</li>
+                        <li>Select Google Cloud Project</li>
+                        <li>Choose daily export (free) or streaming (paid)</li>
+                        <li>Data appears within 24 hours</li>
                     </ol>
                 </div>
-                <div class="highlight-box">
-                    <strong>Result:</strong> Your custom properties become queryable SQL columns
-                </div>
-                <pre><code class="language-sql">-- Query custom properties in BigQuery
+                
+                <pre><code class="language-sql">-- Query your custom properties in BigQuery
 SELECT 
   event_name,
-  (SELECT value.string_value FROM UNNEST(event_params) 
-   WHERE key = 'user_type') as user_type,
-  COUNT(*) as events
-FROM `project.analytics_123456789.events_*`
+  (SELECT value.string_value 
+   FROM UNNEST(event_params) 
+   WHERE key = 'button_text') as button_text,
+  (SELECT value.int_value 
+   FROM UNNEST(event_params) 
+   WHERE key = 'click_count') as clicks,
+  COUNT(*) as total_events
+FROM `project.analytics_123456.events_*`
 WHERE event_name = 'button_click'
-GROUP BY event_name, user_type;</code></pre>
+  AND _TABLE_SUFFIX BETWEEN '20240101' AND '20240131'
+GROUP BY event_name, button_text, clicks;</code></pre>
+                
+                <div class="highlight-box">
+                    <strong>Power Move:</strong> Your custom properties become SQL-queryable columns!
+                </div>
             </section>
             
-            <!-- Slide 24: Repository Structure -->
+            <!-- Slide 27: Repository Structure -->
             <section>
-                <h2>📁 Our Implementation Structure</h2>
+                <h2>Our Implementation Structure</h2>
                 <pre><code class="language-bash">telemetry-demo/
+├── index.html                    # Analytics scripts
 ├── src/
 │   ├── utils/
-│   │   ├── tracking.ts              # Core Clarity & GTM functions
-│   │   └── tracking-comparison.ts   # All approaches compared
+│   │   ├── tracking.ts          # Core tracking functions
+│   │   └── tracking-comparison.ts # All approaches
 │   ├── pages/
-│   │   ├── HomePage.tsx            # Basic event examples  
-│   │   ├── AboutPage.tsx           # Content tracking examples
-│   │   ├── CustomPropertiesPage.tsx # Advanced custom properties
-│   │   └── ComparisonPage.tsx      # Side-by-side testing
-│   └── App.tsx                     # Route tracking setup
-├── index.html                      # Clarity & GTM scripts
-└── package.json                    # react-ga4 dependency</code></pre>
-                <div class="highlight-box">
-                    <strong>Available at:</strong> All working code in this repository
+│   │   ├── HomePage.tsx         # Basic events
+│   │   ├── AboutPage.tsx        # Content tracking
+│   │   └── CustomPropertiesPage.tsx # Advanced examples
+│   └── App.tsx                  # Route tracking
+└── public/
+    └── docs/                    # This presentation</code></pre>
+                
+                <div class="two-columns" style="margin-top: 25px;">
+                    <div class="info-box">
+                        <h4>Live Demo</h4>
+                        <p>Visit any page and open console to see events being tracked in real-time</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Repository</h4>
+                        <p><a href="https://github.com/ChakshuGautam/telemetry-ga-clarity" target="_blank">
+                            github.com/ChakshuGautam/telemetry-ga-clarity
+                        </a></p>
+                    </div>
                 </div>
             </section>
             
-            <!-- Slide 25: Resources -->
+            <!-- Slide 28: Key Takeaways -->
             <section>
-                <h2>📚 Resources & Links</h2>
+                <h2>Key Takeaways</h2>
+                
+                <div class="info-box" style="margin-bottom: 20px;">
+                    <h3 style="color: #88ccff;">1. Start Simple</h3>
+                    <p>Begin with Clarity for visual insights, then add GA4 for metrics</p>
+                </div>
+                
+                <div class="info-box" style="margin-bottom: 20px;">
+                    <h3 style="color: #88ccff;">2. Track Everything Meaningful</h3>
+                    <p>If it affects business decisions, track it with proper context</p>
+                </div>
+                
+                <div class="info-box" style="margin-bottom: 20px;">
+                    <h3 style="color: #88ccff;">3. Use Custom Properties</h3>
+                    <p>Transform generic events into specific business insights</p>
+                </div>
+                
+                <div class="info-box" style="margin-bottom: 20px;">
+                    <h3 style="color: #88ccff;">4. Test Thoroughly</h3>
+                    <p>Use DebugView, console logs, and test environments</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3 style="color: #88ccff;">5. Never Break UX</h3>
+                    <p>Analytics should fail silently, not crash your app</p>
+                </div>
+            </section>
+            
+            <!-- Slide 29: Resources -->
+            <section>
+                <h2>Resources & Links</h2>
+                
                 <div class="two-columns">
-                    <div>
-                        <h3>🔗 Documentation</h3>
-                        <ul>
-                            <li><a href="https://clarity.microsoft.com/" target="_blank">Microsoft Clarity</a></li>
-                            <li><a href="https://tagmanager.google.com/" target="_blank">Google Tag Manager</a></li>
-                            <li><a href="https://developers.google.com/analytics/devguides/collection/ga4" target="_blank">GA4 Developer Docs</a></li>
-                            <li><a href="https://github.com/react-ga/react-ga" target="_blank">React-GA4 GitHub</a></li>
+                    <div class="info-box">
+                        <h4>📚 Documentation</h4>
+                        <ul style="font-size: 0.85em;">
+                            <li><a href="https://clarity.microsoft.com/docs" target="_blank">Microsoft Clarity Docs</a></li>
+                            <li><a href="https://developers.google.com/analytics/devguides/collection/ga4" target="_blank">GA4 Developer Guide</a></li>
+                            <li><a href="https://tagmanager.google.com/gallery" target="_blank">GTM Template Gallery</a></li>
+                            <li><a href="https://support.google.com/analytics/answer/9358801" target="_blank">GA4 Events Reference</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h3>🛠️ Testing Tools</h3>
-                        <ul>
+                    <div class="info-box">
+                        <h4>🛠️ Tools</h4>
+                        <ul style="font-size: 0.85em;">
                             <li><a href="https://tagassistant.google.com/" target="_blank">Google Tag Assistant</a></li>
                             <li><a href="https://ga-dev-tools.google/" target="_blank">GA Dev Tools</a></li>
-                            <li><a href="https://lookerstudio.google.com/" target="_blank">Looker Studio</a></li>
-                            <li>Browser DevTools Network Tab</li>
+                            <li><a href="https://analytics.google.com/analytics/academy/" target="_blank">Analytics Academy</a></li>
+                            <li><a href="https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk" target="_blank">Tag Assistant Extension</a></li>
                         </ul>
                     </div>
                 </div>
+                
                 <div class="highlight-box" style="margin-top: 30px;">
-                    <strong>This Repository:</strong> <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/tree/main/telemetry-demo" target="_blank" style="color: #ffffff;">github.com/ChakshuGautam/telemetry-ga-clarity</a>
+                    <strong>📦 Get the Code:</strong>
+                    <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity" target="_blank" 
+                       style="display: block; margin-top: 10px; font-size: 1.1em;">
+                        github.com/ChakshuGautam/telemetry-ga-clarity
+                    </a>
                 </div>
             </section>
             
-            <!-- Slide 26: Thank You -->
+            <!-- Slide 30: Thank You -->
             <section>
-                <h1>Thank You! 🙏</h1>
-                <div style="margin-top: 50px;">
-                    <p style="font-size: 1.5em;">Questions?</p>
-                </div>
-                <div style="margin-top: 40px;">
-                    <p>📧 Contact: chakshu@samagragovernance.in</p>
-                    <p>📦 Repository: <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity/tree/main/telemetry-demo" target="_blank" style="color: #ffffff;">github.com/ChakshuGautam/telemetry-ga-clarity</a></p>
+                <div class="section-divider">
+                    <h1>Thank You! 🙏</h1>
+                    <p style="font-size: 1.3em; margin-top: 40px;">Questions?</p>
+                    
+                    <div style="margin-top: 50px;">
+                        <p style="font-size: 0.9em;">
+                            <strong>Repository:</strong>
+                            <a href="https://github.com/ChakshuGautam/telemetry-ga-clarity" target="_blank">
+                                github.com/ChakshuGautam/telemetry-ga-clarity
+                            </a>
+                        </p>
+                        <p style="font-size: 0.9em; margin-top: 20px;">
+                            <strong>Contact:</strong> chakshu@samagragovernance.in
+                        </p>
+                    </div>
+                    
+                    <p style="font-size: 0.7em; margin-top: 40px; color: #666;">
+                        Press <kbd>ESC</kbd> for slide overview
+                    </p>
                 </div>
             </section>
             
@@ -906,6 +1144,7 @@ GROUP BY event_name, user_type;</code></pre>
             progress: true,
             center: true,
             transition: 'slide',
+            backgroundTransition: 'fade',
             width: '100%',
             height: '100%',
             plugins: [ RevealHighlight, RevealNotes, RevealMarkdown ]
